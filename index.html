@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天龍體育用品</title>
+  <link rel="icon" type="image/png" href="http://127.0.0.1:5500/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo.png" alt="Company Logo" class="company-logo">
+    </div>
+    <div class="header-right">
+      <input type="text" id="search" placeholder="搜索產品...">
+      <button id="shopping-bag" class="shopping-bag-btn">
+        <i class="fas fa-shopping-cart"></i> (<span id="item-count">0</span>)
+      </button>
+    </div>
+  </header>
+  
+  <!-- Product List Heading -->
+  <h2 class="product-heading">產品列表</h2>
+
+
+  <!-- Product Grid -->
+  <div id="product-list" class="product-grid"></div>
+
+  <!-- Shopping Bag Popup -->
+  <div id="shopping-bag-popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="close-popup">&times;</span>
+      <h2>已選購產品</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>產品名稱</th>
+            <th>單價</th>
+            <th>數量</th>
+            <th>總金額</th>
+          </tr>
+        </thead>
+        <tbody id="bag-items"></tbody>
+      </table>
+      <div class="total">總金額: $<span id="total-price">0</span></div>
+  
+      <!-- Input Fields -->
+      <div class="user-info">
+        <label>姓名: <input type="text" id="user-name" placeholder="您的姓名"></label>
+        <label>電郵: <input type="email" id="user-email" placeholder="您的電子郵件"></label>
+        <label>電話: <input type="tel" id="user-phone" placeholder="您的聯絡電話"></label>
+      </div>
+  
+      <button id="confirm-order">確認您的訂單並透過 WhatsApp 發送</button>
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <footer>
+    <div class="contact-us">
+      <p>電話: <a href="tel:+85261726808">+852 6172 6808</a></p>
+      <p>WhatsApp: <a href="https://wa.me/85261726808" target="_blank">點擊這裡聯絡我們</a></p>
+      <p>電郵: <a href="mailto:fm7sett@gmail.com">fm7sett@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  /* Popup Shopping Bag */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh; /* Limit the height to 80% of the viewport */
+    overflow-y: auto; /* Add vertical scroll when content overflows */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup .total {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #close-popup {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .quantity-controls button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .quantity-controls span {
+    font-weight: bold;
+  }
+
+  
+  /* Shopping Bag Table Styling */
+#shopping-bag-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  #shopping-bag-popup th, 
+  #shopping-bag-popup td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #shopping-bag-popup th {
+    background-color: #f4f4f4;
+    font-size: 1rem;
+  }
+  
+  #shopping-bag-popup td {
+    font-size: 0.95rem;
+  }
+  
+  #shopping-bag-popup .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #shopping-bag-popup .quantity-controls button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #shopping-bag-popup .quantity-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  #shopping-bag-popup .total {
+    text-align: right;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #shopping-bag-popup button#confirm-order {
+    display: block;
+    margin: 0 auto;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #shopping-bag-popup button#confirm-order:hover {
+    background-color: #218838;
+  }
+  
+  /* General Cleanup for Buttons and Layout */
+  button {
+    outline: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .user-info {
+    margin: 1rem 0;
+  }
+  
+  .user-info label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  .user-info input {
+    width: 98%;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #confirm-order {
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #confirm-order:hover {
+    background-color: #1da851;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  footer a {
+    color: #00d084;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+
+/* Header Styling */
+header {
+    position: relative; /* Allows absolute positioning for the center logo */
+    display: flex;
+    justify-content: space-between; /* Keeps left and right aligned */
+    align-items: center;
+    height: 60px;
+    padding: 1rem 2rem;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; 
+  }
+  
+  /* Logo Centered */
+  header .company-logo {
+    position: absolute; /* Center the logo absolutely */
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%); /* Align exactly to center */
+    height: 80px; /* Set desired height */
+    width: auto; /* Maintain original proportions */
+  }
+  
+  /* Header Right Section */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-right input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shopping-bag-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .shopping-bag-btn:hover {
+    background-color: #218838;
+  }
+  
+  
+  /* Search Bar Styling */
+  .search-bar input {
+    width: 80%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .search-bar input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Product Grid Styling */
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .product {
+    background-color: f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product p {
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .product button:hover {
+    background-color: #0056b3;
+  }
+
+  .product-heading {
+    text-align: left;
+    font-size: 1.2rem; /* Smaller font size */
+    color: #333; /* Dark gray for better visibility */
+    margin: 0; /* Closer spacing to product grid */
+    background-color: #f9f9f9; /* Same as the product list background */
+    padding: 2rem 5rem 0.2rem; /* Adds subtle spacing */
+  }
+
+  
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  footer a {
+    color: #00d084;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+
