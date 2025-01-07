@@ -195,51 +195,78 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: auto; /* Adjust height for wrapping */
   padding: 1rem 2rem;
   background-color: #b1d7ff; /* Soft blue */
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow wrapping for mobile */
+  gap: 1rem; /* Add spacing between rows */
 }
 
 header .company-logo {
-  position: absolute;
-  left: 50%;
-  top: 15px;
-  transform: translateX(-50%);
-  height: 80px;
+  position: static; /* Change from absolute to static */
+  margin: 0 auto; /* Center the logo */
+  height: 60px; /* Adjust logo size for mobile */
   width: auto;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* Add space between search bar and shopping bag */
+  width: 100%; /* Make it take the full width */
 }
 
 .header-right input {
+  flex: 1; /* Allow the search bar to take up remaining space */
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 20px;
   font-size: 1rem;
-  width: 200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .shopping-bag-btn {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
   background-color: #4a90e2;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   transition: background-color 0.3s;
 }
 
 .shopping-bag-btn:hover {
   background-color: #357ABD;
 }
+
+/* Adjustments for Mobile View */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack logo and other elements vertically */
+    align-items: center;
+  }
+
+  .header-right {
+    flex-direction: row; /* Place search bar and shopping bag in the same row */
+    justify-content: center;
+  }
+
+  header .company-logo {
+    margin-bottom: 1rem; /* Add spacing below the logo */
+  }
+
+  .header-right input {
+    width: 80%; /* Adjust search bar width */
+  }
+
+  .shopping-bag-btn {
+    flex-shrink: 0; /* Prevent shopping bag from shrinking */
+  }
+}
+
 
 /* Product Grid Styling */
 .product-grid {
