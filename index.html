@@ -21,13 +21,69 @@
       </button>
     </div>
   </header>
-  
-  <!-- Product List Heading -->
-  <h2 class="product-heading">產品列表</h2>
 
+    <!-- Tabs Navigation -->
+    <nav class="tabs">
+      <button class="tab-button" data-tab="about">關於我們</button>
+      <button class="tab-button active" data-tab="equipment">產品列表</button>
+      <button class="tab-button" data-tab="how-to-order">如何訂購</button>
+      <button class="tab-button" data-tab="contact">聯絡我們</button>
+    </nav>
 
-  <!-- Product Grid -->
-  <div id="product-list" class="product-grid"></div>
+    <!-- Tab Content -->
+  <!-- About Us Tab Content -->
+  <div class="tab-content" id="about" style="display: none;">
+    <h2>關於我們</h2>
+    <p>歡迎來到天龍體育用品！</p>
+    <p>
+      天龍體育用品公司於香港成立，致力於為運動員及健身愛好者提供高品質的體育用品。我們的使命是通過提供多樣化的優質運動器材、服裝及配件，激發人們的運動熱情，推動健康生活方式。
+    </p>
+    <p>
+      無論您是專業運動員還是剛開始健身之旅，我們都會陪伴您每一步。天龍體育用品相信運動具有團結人心、提升身心健康的力量。
+    </p>
+    <p>
+      我們以卓越的客戶服務和對運動的熱忱為宗旨，力求成為您達成健身目標的可靠夥伴。探索我們的線上商城，找到適合您的運動產品。加入天龍體育用品社群，讓您的運動表現更上一層樓！
+    </p>
+    <h2>About Us</h2>
+    <p>Welcome to Tin Lung Sports HK !</p>
+    <p>
+      Founded in the vibrant city of Hong Kong, Tin Lung Sports HK is dedicated to providing 
+      high-quality sporting goods to athletes and fitness enthusiasts. Our mission is to inspire 
+      an active lifestyle by offering a wide range of premium sports equipment, apparel, and accessories.
+    </p>
+    <p>
+      Whether you’re a professional athlete or just starting your fitness journey, we’re here to support 
+      you every step of the way. At Tin Lung Sports HK, we believe in the power of sport to bring people 
+      together and enhance both physical and mental well-being.
+    </p>
+    <p>
+      With a commitment to excellent customer service and a passion for sports, we strive to be your trusted 
+      partner in achieving your fitness goals. Explore our online store and discover products tailored to your needs. 
+      Join the Tin Lung Sports HK community today and take your performance to the next level!
+    </p>
+  </div>
+
+  <div class="tab-content" id="contact" style="display: none;">
+    <h2>聯絡我們</h2>
+    <p>電話： <a href="tel:+85261726808">+852 6172 6808</a></p>
+    <p>WhatsApp: <a href="https://wa.me/85261726808" target="_blank">Click here to contact us</a></p>
+    <p>電郵: <a href="mailto:tinlungsportshk@gmail.com">tinlungsportshk@gmail.com</a></p>
+  </div>
+
+  <div class="tab-content" id="equipment">
+    <h2>產品列表</h2>
+    <div id="product-list" class="product-grid"></div>
+  </div>
+
+  <div class="tab-content" id="how-to-order" style="display: none;">
+    <h2>如何訂購</h2>
+    <ol>
+      <li>選擇並將您心儀的產品加入購物袋</li>
+      <li>輸入您的聯絡信息</li>
+      <li>確認您的訂單並透過 WhatsApp 發送</li>
+      <li>等待 WhatsApp 的確認信息</li>
+    </ol>
+  </div>
 
   <!-- Shopping Bag Popup -->
   <div id="shopping-bag-popup" class="popup hidden">
@@ -61,13 +117,12 @@
   <!-- Contact Us -->
   <footer>
     <div class="contact-us">
-      <p>電話: <a href="tel:+85261726808">+852 6172 6808</a></p>
-      <p>WhatsApp: <a href="https://wa.me/85261726808" target="_blank">點擊這裡聯絡我們</a></p>
-      <p>電郵: <a href="mailto:fm7sett@gmail.com">fm7sett@gmail.com</a></p>
-    </div>
+      <p> Tin Lung Sports HK 2024 &copy; All rights reserved.</p>
+     </div>
   </footer>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
+  <script src="xlsx.full.min.js"></script>
 </body>
 </html>
